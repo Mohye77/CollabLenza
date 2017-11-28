@@ -1,0 +1,11 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "collab-lenza-client-side-solution",
+    "id": "7b0be96f-d68b-43c4-a167-a50a08c06013",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/collab-lenza.sppkg"
+  }
+}
