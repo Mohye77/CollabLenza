@@ -2,7 +2,9 @@ define([], function() {
   return {
     "PropertyPaneDescription": "Description",
     "BasicGroupName": "Group Name",
-    "DescriptionFieldLabel": "Description Field",   
-    "DrawIdFieldLabel": "Id de la zone de dessin"
+    "DescriptionFieldLabel": "Description Field",
+    "DrawIdFieldLabel": "Id de la zone de dessin",
+    "ListNameFieldLabel":"Nom de la liste de dessins",
+    "DrawingListDescription":"La liste de dessins"
   }
 });

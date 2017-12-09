@@ -1,7 +1,9 @@
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
+  PropertyPaneButton,
+  PropertyPaneButtonType
 } from '@microsoft/sp-webpart-base';
 import {
   Version,
@@ -66,6 +68,14 @@ export default class CollabLenzaWebPart extends BaseClientSideWebPart < ICollabL
             }),
             PropertyPaneTextField('drawId', {
               label: strings.DrawIdFieldLabel
+            }),
+            PropertyPaneTextField('listTitle', {
+              label: strings.DrawIdFieldLabel
+            }),
+            PropertyPaneButton('', {
+              text: "Créer la liste",
+              buttonType: PropertyPaneButtonType.Normal,
+              onClick: this.createDrawingList
             })
           ]
         }]
@@ -230,8 +240,12 @@ export default class CollabLenzaWebPart extends BaseClientSideWebPart < ICollabL
       this._redraw(true);
     });
   }
-
   //#endregion DataAccess
+
+  private createDrawingList = (): void => {
+    pnp.sp.web.lists.ensure(this.properties.listTitle);
+  }
+
   private _selectColor = (event) => {
     let selectedPencilColor = document.querySelector('.' + styles.pencil + '.selected');
     if (selectedPencilColor) {

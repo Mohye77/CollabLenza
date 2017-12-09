@@ -3,6 +3,8 @@ declare interface ICollabLenzaWebPartStrings {
   BasicGroupName: string;
   DescriptionFieldLabel: string;
   DrawIdFieldLabel: string;
+  ListNameFieldLabel: string;
+  DrawingListDescription:string;
 }
 
 declare module 'CollabLenzaWebPartStrings' {
